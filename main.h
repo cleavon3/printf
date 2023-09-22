@@ -1,4 +1,3 @@
-
 #ifndef MAIN_H
 
 #define MAIN_H
@@ -34,17 +33,20 @@
 
 #define S_SHORT 1
 
+
 /**
- * struct fmt - Struct for format specifiers and associated functions
+
+ * struct fmt - Struct op
+
  *
- * @fmt: The format specifier.
+
+ * @fmt: The format.
+
  * @fn: The function associated.
+
  */
+
 struct fmt
-{
-char fmt;
-int (*fn)(va_list, char[], int, int, int, int);
-};
 
 {
 
@@ -53,18 +55,23 @@ char fmt;
 int (*fn)(va_list, char[], int, int, int, int);
 
 };
+
+
+
 /**
- * typedef struct fmt fmt_t - Typedef for format specifiers
+
+ * typedef struct fmt fmt_t - Struct op
+
  *
- * @fmt: The format specifier.
- * @fn: The function associated.
+
+ * @fmt: The format.
+
+ * @fm_t: The function associated.
+
  */
+
 typedef struct fmt fmt_t;
 
-{
-char fmt;
-int (*fn)(va_list, char *, int, int, int, int);
-} fmt_t;
 
 int _printf(const char *format, ...);
 
@@ -184,7 +191,6 @@ int width, int flags, char padd, char extra_c, int padd_start);
 int write_unsgnd(int is_negative, int ind,
 
 char buffer[],
-
 int flags, int width, int precision, int size);
 
 
